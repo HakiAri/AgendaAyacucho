@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5D737E</color>
+    <color name="colorPrimaryDark">#55505C</color>
+    <color name="colorAccent">#7FC6A4</color>
+    <color name="colorAccentOne">#97A5AC</color>
+    <color name="light_gray">#E1E1E1</color>
+    <color name="near_black">#222222</color>
+    <color name="zebra_blue">#00769F</color>
+    <color name="zebra_yellow">#FFD200</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#686565</color>
+    <color name="colorRed">#fc8181</color>
+</resources>

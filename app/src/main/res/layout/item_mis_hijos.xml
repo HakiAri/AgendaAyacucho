@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    app:contentPadding="1dp"
+    android:elevation="3dp"
+    app:cardCornerRadius="10dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_marginLeft="6sp">
+
+        <TextView
+            android:id="@+id/imh_tvCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/near_black"
+            android:layout_centerVertical="true"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:text="4to B"/>
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/imh_tvMiHijo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/near_black"
+        android:textSize="18dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="bottom"
+        android:textAlignment="center"
+        android:text="Matematicas"/>
+
+</android.support.v7.widget.CardView>
