@@ -318,6 +318,25 @@ public class Maya {
         }
     }
 
+    public int buscarRol(){
+        String[] columnasu = { "id_rol" };
+        manejaBD = new HandlerBasedeDatos(context);
+        nuestraBD = manejaBD.getWritableDatabase();
+        Cursor cu = nuestraBD.query("usuarios",columnasu,"1 = 1",null,null,null,null);
+        //Log.d("sql",cu.getCount()+"");
+        if(cu.getCount() == 1){
+
+            int i_id_rol  = cu.getColumnIndex("id_rol");
+            cu.moveToFirst();
+            Log.d("id_rol : ", cu.getString(i_id_rol)+"" );
+
+            return  Integer.parseInt(cu.getString(i_id_rol));
+
+        }else{
+            return  -1;
+        }
+    }
+
     public String fechaActual(int tipo){
         Calendar c = new GregorianCalendar();
         String [] meses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};

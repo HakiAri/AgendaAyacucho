@@ -186,10 +186,8 @@ public class MisHijosFragment extends Fragment {
                     //maya.Toast("tam "+jsonUsuario.length());
 
                     if(jsonUsuario.length()==2){
-                        JSONArray json = jsonUsuario.optJSONArray("acesor");
+                        JSONArray json = jsonUsuario.optJSONArray("estudiantes");
                         listaEstudiante = new ArrayList<>();
-
-
                         for (int i = 0; i < json.length(); i++) {
                             JSONObject jsonObject = null;
                             jsonObject = json.getJSONObject(i);

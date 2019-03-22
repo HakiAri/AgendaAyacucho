@@ -132,7 +132,7 @@ public class MenuTutorActivity extends AppCompatActivity
         }
 
         if (fragmentSeleccionado == true){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main,miFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main_tutor,miFragment).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

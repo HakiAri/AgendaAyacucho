@@ -42,8 +42,20 @@ public class MainActivity extends AppCompatActivity {
                     er.printStackTrace();
                 }finally {
                         if(!maya.buscarNombreLogeado().isEmpty()){
-                            i = new Intent(getApplicationContext(), MenuPrincipalActivity.class);
-                            startActivity(i);
+                            switch (maya.buscarRol()){
+                                case 2:
+                                    Intent md = new Intent(getApplicationContext(), MenuPrincipalActivity.class);
+                                    startActivity(md);
+                                    break;
+                                case 3:
+                                    Intent mpf = new Intent(getApplicationContext(), MenuTutorActivity.class);
+                                    startActivity(mpf);
+                                    break;
+                                case 4:
+                                    Intent me = new Intent(getApplicationContext(), MenuTutorActivity.class);
+                                    startActivity(me);
+                                    break;
+                            }
                         }else{
                             i = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(i);
