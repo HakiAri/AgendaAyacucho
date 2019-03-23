@@ -24,7 +24,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MenuTutorActivity"
-            android:label="@string/title_activity_menu_tutor"
+            android:label="Padre de Familia"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".FaltasEstudianteActivity" />
         <activity android:name=".EnviarCitacionEstudianteActivity" />
