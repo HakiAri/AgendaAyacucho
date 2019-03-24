@@ -3,12 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.EstudiantesCursoFragment">
 
     <RelativeLayout
         android:paddingTop="4dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/Buscador"
+            android:layout_below="@+id/Cabecera"
+            android:elevation="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
             android:id="@+id/fec_etbuscar"
             android:layout_width="match_parent"
@@ -23,6 +34,7 @@
             android:singleLine="true"
             android:focusable="auto"
             android:typeface="serif" />
+        </android.support.v7.widget.CardView>
     </RelativeLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -30,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="?attr/actionBarSize">
+        android:layout_marginTop="60dp">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/fec_rvEstudiantes"

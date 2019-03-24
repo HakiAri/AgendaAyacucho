@@ -51,6 +51,8 @@ public class FaltasEstudianteActivity extends AppCompatActivity {
     private LinearLayoutManager linearLayoutManager;
     private ProgressDialog progress;
 
+    private int sw = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,9 +60,20 @@ public class FaltasEstudianteActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         maya = new Maya(this);
+
+        sw = getIntent().getExtras().getInt("sw");
         //itemCurso = (Curso) getIntent().getSerializableExtra("itemCurso");
+
         itemEstudiante = (Estudiante) getIntent().getSerializableExtra("itemEstudiante");
-        getSupportActionBar().setTitle(itemEstudiante.getNombre()+" "+itemEstudiante.getPaterno());
+
+        if(sw == 1){
+            getSupportActionBar().setTitle(maya.buscarNombreLogeado());
+        }else{
+            getSupportActionBar().setTitle(itemEstudiante.getNombre()+" "+itemEstudiante.getPaterno());
+        }
+
+
+
 
         _rvFaltas = findViewById(R.id.fe_rvFaltas);
         _etBuscar = findViewById(R.id.fe_etbuscar);
@@ -147,7 +160,12 @@ public class FaltasEstudianteActivity extends AppCompatActivity {
                 Map<String,String> params = new HashMap<String, String>();
                 /*params.put("usuario",maya.buscarUsuarioLogeado());
                 params.put("contrasenia",maya.buscarSecretLogeado());*/
-                params.put("id_rude",String.valueOf(itemEstudiante.getId_rude()));
+                if(sw == 1){
+                    params.put("id_rude",String.valueOf(maya.buscarId_Objeto()));
+                }else{
+                    params.put("id_rude",String.valueOf(itemEstudiante.getId_rude()));
+                }
+
                 params.put("fecha","");
                 return params;
             }
@@ -159,7 +177,7 @@ public class FaltasEstudianteActivity extends AppCompatActivity {
         listFalta.clear();
 
         for (int i = 0; i < listFaltaAux.size(); i++){
-            if (listFaltaAux.get(i).getDescripcion().toLowerCase().contains(filtro.toLowerCase())){
+            if (listFaltaAux.get(i).getMateria().toLowerCase().contains(filtro.toLowerCase())){
                 listFalta.add(listFaltaAux.get(i));
             }
         }
