@@ -129,6 +129,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 Intent mat = new Intent(getApplicationContext(),MenuTutorActivity.class);
                                 startActivity(mat);
                                 break;
+                            case 4:
+                                manejaBD = new HandlerBasedeDatos(getApplicationContext());
+                                manejaBD.addUsuario(Integer.parseInt(jsonUsuario.optString("id_user")),jsonUsuario.optString("id_rol"),jsonUsuario.optString("rol"),jsonUsuario.optString("id_objeto"),jsonUsuario.optString("nombre")+" "+jsonUsuario.optString("ap_paterno")+" "+jsonUsuario.optString("ap_materno"),"https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png",_etNombreUsuario.getEditText().getText().toString().trim(),_etcontrasenia.getEditText().getText().toString().trim());
+                                Intent me = new Intent(getApplicationContext(),MenuEstudianteActivity.class);
+                                startActivity(me);
+                                break;
                         }
                         finish();
                     }else{

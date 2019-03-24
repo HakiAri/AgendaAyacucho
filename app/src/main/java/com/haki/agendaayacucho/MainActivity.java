@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(mpf);
                                     break;
                                 case 4:
-                                    Intent me = new Intent(getApplicationContext(), MenuTutorActivity.class);
+                                    Intent me = new Intent(getApplicationContext(), MenuEstudianteActivity.class);
                                     startActivity(me);
                                     break;
                             }
