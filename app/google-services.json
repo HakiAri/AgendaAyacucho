@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "155387013230",
+    "firebase_url": "https://kardex-ayacucho.firebaseio.com",
+    "project_id": "kardex-ayacucho",
+    "storage_bucket": "kardex-ayacucho.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155387013230:android:a056f12481031501",
+        "android_client_info": {
+          "package_name": "com.haki.agendaayacucho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155387013230-4klu3h74eh0lcb4rsm2if1amh9ccm8bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDvZ5sxJScXeq9u3PUWnhNGNNci8V6te0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

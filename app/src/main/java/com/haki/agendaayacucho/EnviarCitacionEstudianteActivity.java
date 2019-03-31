@@ -106,7 +106,7 @@ public class EnviarCitacionEstudianteActivity extends AppCompatActivity implemen
                 dpd.show();
                 break;
             case R.id.btn_ec:
-                registarCitacion(_tvUno.getText().toString()+_tvDos.getText().toString()+_tvTres.getText().toString()+_tvCuatro.getText().toString(),anio_x+"-"+mes_x+"-"+dia_x+" "+hora_x+":"+minuto_x);
+                registarCitacion(_tvUno.getText().toString()+_tvDos.getText().toString()+_tvTres.getText().toString()+_tvCuatro.getText().toString(),anio_x+"-"+(mes_x+1)+"-"+dia_x+" "+hora_x+":"+minuto_x);
                 break;
             default:
                 break;
@@ -163,6 +163,7 @@ public class EnviarCitacionEstudianteActivity extends AppCompatActivity implemen
                     params.put("citacion",citacion);
                     params.put("fechayhora",fecha);
                     params.put("id_kardex",String.valueOf(itemEstudiante.getId_kardex()));
+                    Log.d("PARAM", String.valueOf(params));
                     return params;
                 }
             };

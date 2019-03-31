@@ -34,7 +34,7 @@ public class EstudianteAdapter extends RecyclerView.Adapter<EstudianteAdapter.Es
 
     @Override
     public void onBindViewHolder(@NonNull EstudianteHolder estudianteHolder, int i) {
-        estudianteHolder._tvNombre.setText(listEstudiante.get(i).getNombre()+" "+listEstudiante.get(i).getPaterno()+" "+listEstudiante.get(i).getMaterno());
+        estudianteHolder._tvNombre.setText(listEstudiante.get(i).getPaterno()+" "+listEstudiante.get(i).getMaterno()+" "+listEstudiante.get(i).getNombre());
         //estudianteHolder._tvDatos.setText(String.valueOf(listEstudiante.get(i).getId_rude()));
         estudianteHolder._tvDatos.setText("");
     }
