@@ -22,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.haki.agendaayacucho.Lai.HandlerBasedeDatos;
+import com.haki.agendaayacucho.Lai.Variables;
 import com.haki.agendaayacucho.LuisMiguel.Maya;
 
 import org.json.JSONException;
@@ -158,6 +159,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Map<String,String> params = new HashMap<String, String>();
                 params.put("user",_etNombreUsuario.getEditText().getText().toString().trim());
                 params.put("password",_etcontrasenia.getEditText().getText().toString().trim());
+                params.put("token", Variables.TOKEN);
+                //params.put("token", "LUIS MIGUEL");
                 return params;
             }
         };
