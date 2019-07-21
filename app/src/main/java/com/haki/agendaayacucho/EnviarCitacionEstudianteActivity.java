@@ -84,8 +84,8 @@ public class EnviarCitacionEstudianteActivity extends AppCompatActivity implemen
     public void onTimeSet(TimePicker timePicker, int i, int i1) {
         hora_x   = i;
         minuto_x = i1;
-        _tvDos.setText("Docente : "+maya.buscarNombreLogeado()+"\n del paralelo :  "+itemCurso.getGrado()+" "+itemCurso.getParalelo()+" \n Materia de : "+itemCurso.getMateria()+"\n del estudiante : "+itemEstudiante.getNombre()+" "+itemEstudiante.getPaterno()+" "+itemEstudiante.getMaterno());
-        _tvCuatro.setText("se le ruega asistir en la fecha de "+dia_x+"/"+meses[mes_x]+"/"+anio_x+"\n a horas : "+hora_x+" : "+minuto_x);
+        _tvDos.setText("Señor padre de familia. el/la maestro/a "+maya.buscarNombreLogeado()+"\n del paralelo :  "+itemCurso.getGrado()+" "+itemCurso.getParalelo()+" \n Materia de : "+itemCurso.getMateria()+"\n del estudiante : "+itemEstudiante.getNombre()+" "+itemEstudiante.getPaterno()+" "+itemEstudiante.getMaterno()+" ");
+        _tvCuatro.setText("se le ruega asistir en la fecha de "+dia_x+"/"+meses[mes_x]+"/"+anio_x+"\n a horas : "+hora_x+" : "+minuto_x + "Para poder conversar sobre su hijo");
         _tvUno.setVisibility(View.VISIBLE);
         _tvDos.setVisibility(View.VISIBLE);
         _tvTres.setVisibility(View.VISIBLE);

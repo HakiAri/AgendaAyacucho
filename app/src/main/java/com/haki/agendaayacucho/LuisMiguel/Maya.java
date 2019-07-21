@@ -109,8 +109,8 @@ public class Maya {
             Toast("No se encuentra activo ninguna conexion a servidor...");
         }
         return  urlservidor;*/
-        //return "http://192.168.1.15/ayacucho";
-        return "http://ayacucho.hakiari.com";
+        return "http://192.168.0.20/ayacucho";
+        //return "http://ayacucho.hakiari.com";
     }
 
     public String  buscarMacBluetooth() {

@@ -1,7 +1,6 @@
 package com.haki.agendaayacucho;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,8 +10,6 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 
 import com.android.volley.AuthFailureError;
@@ -22,10 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.haki.agendaayacucho.Adaptadores.FaltaAdapter;
 import com.haki.agendaayacucho.Adaptadores.FaltasEstudianteAdapter;
 import com.haki.agendaayacucho.LuisMiguel.Maya;
-import com.haki.agendaayacucho.Modelos.Curso;
 import com.haki.agendaayacucho.Modelos.Estudiante;
 import com.haki.agendaayacucho.Modelos.FaltaHijo;
 
@@ -35,10 +30,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class FaltasEstudianteActivity extends AppCompatActivity {
+public class CitacionesEstudianteActivity extends AppCompatActivity {
 
     private Maya maya;
     private RecyclerView _rvFaltas;
@@ -56,7 +50,7 @@ public class FaltasEstudianteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faltas_estudiante);
+        setContentView(R.layout.activity_citaciones_estudiante);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         maya = new Maya(this);

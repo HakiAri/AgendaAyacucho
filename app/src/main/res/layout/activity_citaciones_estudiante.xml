@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaltasEstudianteActivity">
+
+    <ImageView
+        android:src="@drawable/ic_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:tint="@color/colorPrimary"
+        android:scaleType="fitXY"/>
+
+    <!-- Imagen Cabecera  -->
+    <RelativeLayout
+        android:id="@+id/parte_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/Cabecera"
+            android:elevation="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/menu_faltas"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvCalendario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    android:text="Historial de Todas sus Faltas"/>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/Buscador"
+            android:layout_below="@+id/Cabecera"
+            android:elevation="10dp"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/fe_etbuscar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="start"
+                android:hint="Buscar falta por materia..."
+                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="8sp"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:singleLine="true"
+                android:focusable="auto"
+                android:typeface="serif" />
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <!-- Menu -->
+    <LinearLayout
+        android:layout_below="@+id/parte_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="12"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fe_rvFaltas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</RelativeLayout>

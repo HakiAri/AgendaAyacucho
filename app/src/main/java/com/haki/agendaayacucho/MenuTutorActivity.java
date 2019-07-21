@@ -24,6 +24,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.haki.agendaayacucho.Fragments.CitacionesFragment;
 import com.haki.agendaayacucho.Fragments.CitacionesTutorFragment;
 import com.haki.agendaayacucho.Fragments.FaltasHijoFragment;
+import com.haki.agendaayacucho.Fragments.MisHijosCitacionFragment;
 import com.haki.agendaayacucho.Fragments.MisHijosFragment;
 import com.haki.agendaayacucho.Interface.IFragmentMisHijos;
 import com.haki.agendaayacucho.LuisMiguel.Maya;
@@ -35,6 +36,7 @@ public class MenuTutorActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener ,
         CitacionesTutorFragment.OnFragmentInteractionListener,
         MisHijosFragment.OnFragmentInteractionListener,
+        MisHijosCitacionFragment.OnFragmentInteractionListener,
         IFragmentMisHijos,
         FaltasHijoFragment.OnFragmentInteractionListener{
 
@@ -105,7 +107,7 @@ public class MenuTutorActivity extends AppCompatActivity
             miFragment = new MisHijosFragment();
             fragmentSeleccionado = true;
         } else if (id == R.id.nav_gallery) {
-            miFragment = new CitacionesTutorFragment();
+            miFragment = new MisHijosCitacionFragment();
             fragmentSeleccionado = true;
         } else if (id == R.id.nav_slideshow) {
             //maya.toastAdvertencia("Debe estar Conectado a una Red 4G, 3G o WIFI");
