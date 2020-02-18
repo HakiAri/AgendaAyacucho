@@ -1,7 +1,9 @@
 package com.haki.agendaayacucho;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
@@ -38,6 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Maya maya;
     private HandlerBasedeDatos manejaBD;
     private SQLiteDatabase nuestraBD;
+    public  String token = "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
         maya = new Maya(this);
+        cargarToken();
         _etcontrasenia   = findViewById(R.id.etContrasenia);
         _etNombreUsuario = findViewById(R.id.etUsuario);
         _btnConectar     = findViewById(R.id.btnConectar);
@@ -137,6 +141,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 startActivity(me);
                                 break;
                         }
+                        enviarTokenUsuario(jsonUsuario.optString("id_user"),jsonUsuario.optString("id_rol"));
                         finish();
                     }else{
                         maya.Toast("Comuniquese con su administrador :(");
@@ -167,6 +172,63 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         requestQueue.add(stringRequest);
     }
 
+    private void enviarTokenUsuario(final String id_usuario, final String id_rol){
+        //String url="http://prueba.hakiari.com/wsLoginJson.php";
+        //String url="http://190.104.29.14/inventarios/?/sitio/app-autenticar";
+        String url=maya.buscarUrlServidor()+"/app/servicesREST/ws_cargar_token.php";
+        Log.d("URL Sesion ", url);
+        Log.d("SESION ", _etNombreUsuario.getEditText().getText().toString().trim()+" / "+_etcontrasenia.getEditText().getText().toString().trim());
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    Log.e("JSON Token",response);
+                    JSONObject jsonUsuario = new JSONObject(response);
+                    //maya.Toast("tam "+jsonUsuario.length());
+                    if(jsonUsuario.length() > 0){
+                        if(jsonUsuario.optString("estado").equals("s")){
+                            maya.toastInfo("Registrado exitosamente");
+                        }else{
+                            maya.toastError("Registrado exitosamente");
+                        }
+
+                    }else{
+                        maya.Toast("Comuniquese con su administrador :(");
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    maya.toastError("No existe respuesta correcta a la peticion");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("URLLogin ", error+"");
+                //maya.Toast(error+"");
+                maya.toastInfo("No existe respuesta para continuar");
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("usuario",_etNombreUsuario.getEditText().getText().toString().trim());
+                params.put("contrasenia",_etcontrasenia.getEditText().getText().toString().trim());
+                params.put("token", token);
+                params.put("id_usuario", id_usuario);
+                params.put("id_rol", id_rol );
+                Log.d("params",String.valueOf(params));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    private void cargarToken(){
+        SharedPreferences sharedPref = getSharedPreferences("token", Context.MODE_PRIVATE);
+        token = sharedPref.getString("token","000000000");
+    }
 
     public void permisosGeolocalizacion() {
 

@@ -1,39 +1,45 @@
 {
   "project_info": {
-    "project_number": "155387013230",
-    "firebase_url": "https://kardex-ayacucho.firebaseio.com",
-    "project_id": "kardex-ayacucho",
-    "storage_bucket": "kardex-ayacucho.appspot.com"
+    "project_number": "729304412050",
+    "firebase_url": "https://agendaayacucho.firebaseio.com",
+    "project_id": "agendaayacucho",
+    "storage_bucket": "agendaayacucho.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:155387013230:android:a056f12481031501",
+        "mobilesdk_app_id": "1:729304412050:android:58e9911c977fccfbc29b4b",
         "android_client_info": {
           "package_name": "com.haki.agendaayacucho"
         }
       },
       "oauth_client": [
         {
-          "client_id": "155387013230-4klu3h74eh0lcb4rsm2if1amh9ccm8bq.apps.googleusercontent.com",
+          "client_id": "729304412050-mr27dqnfn9k6p9agrsui257pvespfcdt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.haki.agendaayacucho",
+            "certificate_hash": "53025fe0a55df7427e124f040116fe2420f0e3df"
+          }
+        },
+        {
+          "client_id": "729304412050-9ks55flkfemjg0gc71lp34rqaa691tl5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCDvZ5sxJScXeq9u3PUWnhNGNNci8V6te0"
+          "current_key": "AIzaSyDYIU_k30d7r9icEc8Fory0hOs03nm8cnc"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729304412050-9ks55flkfemjg0gc71lp34rqaa691tl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

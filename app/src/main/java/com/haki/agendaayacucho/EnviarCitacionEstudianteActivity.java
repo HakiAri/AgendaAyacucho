@@ -163,6 +163,7 @@ public class EnviarCitacionEstudianteActivity extends AppCompatActivity implemen
                     params.put("citacion",citacion);
                     params.put("fechayhora",fecha);
                     params.put("id_kardex",String.valueOf(itemEstudiante.getId_kardex()));
+                    params.put("id_user",String.valueOf(maya.id_user()));
                     Log.d("PARAM", String.valueOf(params));
                     return params;
                 }
