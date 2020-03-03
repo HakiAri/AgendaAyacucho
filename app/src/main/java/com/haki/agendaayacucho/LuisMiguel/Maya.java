@@ -109,7 +109,7 @@ public class Maya {
             Toast("No se encuentra activo ninguna conexion a servidor...");
         }
         return  urlservidor;*/
-        return "http://192.168.0.20/ayacucho";
+        return "http://192.168.1.7/ayacucho";
         //return "http://ayacucho.hakiari.com";
     }
 
