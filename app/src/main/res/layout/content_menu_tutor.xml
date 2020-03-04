@@ -11,11 +11,5 @@
     android:background="@drawable/ic_fondo_dos"
     tools:showIn="@layout/app_bar_menu_tutor">
 
-    <ImageView
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@drawable/ic_logo_colegio"/>
 
 </RelativeLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_fondo_dos"
     tools:context=".LoginActivity">
 
 
@@ -15,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="233dp"
             android:paddingTop="30dp"
-            android:src="@drawable/ic_logo_colegio" />
+            android:src="@drawable/ic_logo_banner" />
 
         <LinearLayout
             android:layout_width="match_parent"

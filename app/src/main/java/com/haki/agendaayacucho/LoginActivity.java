@@ -104,8 +104,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void LoginUsuario(){
-        //String url="http://prueba.hakiari.com/wsLoginJson.php";
-        //String url="http://190.104.29.14/inventarios/?/sitio/app-autenticar";
+
         String url=maya.buscarUrlServidor()+"/app/servicesREST/ws_login.php";
         Log.d("URL Sesion ", url);
         Log.d("SESION ", _etNombreUsuario.getEditText().getText().toString().trim()+" / "+_etcontrasenia.getEditText().getText().toString().trim());
@@ -165,7 +164,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 params.put("user",_etNombreUsuario.getEditText().getText().toString().trim());
                 params.put("password",_etcontrasenia.getEditText().getText().toString().trim());
                 params.put("token", Variables.TOKEN);
-                //params.put("token", "LUIS MIGUEL");
+                Log.d("params",String.valueOf(params));
                 return params;
             }
         };

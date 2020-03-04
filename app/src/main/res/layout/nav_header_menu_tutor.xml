@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="260dp"
-    android:background="@drawable/ic_banner"
-    android:backgroundTint="@color/colorAccentOne"
+    android:background="@drawable/ic_fondo_dos"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <de.hdodenhof.circleimageview.CircleImageView
